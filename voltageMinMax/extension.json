@@ -1,0 +1,25 @@
+{
+  "version": "0.0.1",
+  "apiVersion": "1.0.0",
+  "author": "Tim Reyes",
+  "description": "",
+  "name": "Voltage Min and Max",
+  "extensions": {
+    "MinAndMax": {
+      "type": "AnalogMeasurement",
+      "entryPoint": "voltage_min_max.VoltageMinMaxMeasurer",
+      "metrics": {
+        "minimum": {
+          "name": "Minimum",
+          "notation": "V<sub>MIN</sub>",
+          "units": "V"
+        },
+        "maximum": {
+          "name": "Maximum",
+          "notation": "V<sub>MAX</sub",
+          "units": "V"
+        }
+      }
+    }
+  }
+}

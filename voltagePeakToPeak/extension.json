@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "apiVersion": "1.0.0",
+  "author": "Tim Reyes",
+  "description": "",
+  "name": "Peak-to-Peak Voltage",
+  "extensions": {
+    "PeakToPeak": {
+      "type": "AnalogMeasurement",
+      "entryPoint": "voltage_peak_to_peak.VoltagePeakToPeak",
+      "metrics": {
+        "peakToPeak": {
+          "name": "Peak-To-Peak Voltage",
+          "notation": "V<sub>pp</sub>",
+          "units": "V"
+        }
+      }
+    }
+  }
+}

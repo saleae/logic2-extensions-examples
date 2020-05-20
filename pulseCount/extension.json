@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "apiVersion": "1.0.0",
+  "author": "Tim Reyes",
+  "description": "Count pos and neg pulses",
+  "name": "Pulse Count",
+  "extensions": {
+    "Pulses": {
+      "type": "DigitalMeasurement",
+      "entryPoint": "pulseCount.PosNegPulseMeasurer",
+      "metrics": {
+        "positivePulses": {
+          "name": "Positive Pulses",
+          "notation": "N<sub>p(+)</sub>"
+        },
+        "negativePulses": {
+          "name": "Negative Pulses",
+          "notation": "N<sub>p(-)</sub>"
+        }
+      }
+    }
+  }
+}

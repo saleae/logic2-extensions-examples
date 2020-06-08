@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "apiVersion": "1.0.0",
+  "author": "Tim Reyes",
+  "description": "",
+  "name": "Average Period",
+  "extensions": {
+    "AvgPeriod": {
+      "type": "DigitalMeasurement",
+      "entryPoint": "average_period.AveragePeriodMeasurer",
+      "metrics": {
+        "averagePeriod": {
+          "name": "Average Period",
+          "notation": "T<sub>avg</sub>",
+          "units": "s"
+        }
+      }
+    }
+  }
+}

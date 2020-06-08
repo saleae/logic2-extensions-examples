@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "apiVersion": "1.0.0",
+  "author": "Tim Reyes",
+  "description": "",
+  "name": "Total Periods",
+  "extensions": {
+    "min pos pulse": {
+      "type": "DigitalMeasurement",
+      "entryPoint": "total_periods.TotalPeriodMeasurer",
+      "metrics": {
+        "totalPeriods": {
+          "name": "Total Periods",
+          "notation": "P<sub>total</sub>"
+        }
+      }
+    }
+  }
+}

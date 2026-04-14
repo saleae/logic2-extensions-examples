@@ -17,12 +17,13 @@ class VoltageMinMaxMeasurer(AnalogMeasurer):
         self.minimum_value = None
 
         if MINIMUM_V in self.requested_measurements:
-            self.minimum_value = 0
+            self.minimum_value = math.inf
 
         self.maximum_value = None
 
         if MAXIMUM_V in self.requested_measurements:
-            self.maximum_value = 0
+            self.maximum_value = -math.inf
+
     # This method will be called one or more times per measurement with batches of data
     # data has the following interface
     #   * Iterate over to get Voltage values, one per sample
@@ -31,11 +32,11 @@ class VoltageMinMaxMeasurer(AnalogMeasurer):
     def process_data(self, data):
         if self.minimum_value is not None:
             min_val = numpy.amin(data.samples)
-            self.minimum_value = min_val
+            self.minimum_value = min(min_val, self.minimum_value)
 
         if self.maximum_value is not None:
             max_val = numpy.amax(data.samples)
-            self.maximum_value = max_val
+            self.maximum_value = max(max_val, self.maximum_value)
 
     # This method is called after all the relevant data has been passed to `process_data`
     # It returns a dictionary of the request_measurements values
